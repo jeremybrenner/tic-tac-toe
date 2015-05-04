@@ -94,6 +94,13 @@ window.addEventListener("load", function () {
 			playerCounter = 0
 		}
 
+	var turnDisplay = function(){
+		var display = div.currentTurn;
+		if(playerCounter%2 === 0){
+			display.innerHTML = 'Test'
+
+		}
+	}
 
 	document.querySelector('.reset').addEventListener("click", function(event){
 		resetBoard();

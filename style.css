@@ -1,3 +1,7 @@
+h1{
+  font-family: "Francois One", sans-serif;
+}
+
 .title{
   width: 31em;
   height: 30em;
@@ -8,29 +12,42 @@
 
 
 #board {
-  width: 31em;
-  height: 30em;
+  width: 400px;
+  height: 400px;
   position: fixed;
-  top: 25%;
-  left: 25%;
+  top: 20%;
+  left: 30%;
+
 }
 
 .box {
-  width: 10em;
-  height: 10em;
-  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  border: 3px solid black;
   display: inline-block;
-  margin-bottom: 4px;
-  border-radius: 10px;
- /* font-size: 8em;*/
+  margin-bottom: 3px;
+  border-radius: 7px;
+  font-size: 75px;
+  font-family: "Francois One", sans-serif;
 }
 
 .reset {
-  width: 10em;
-  height: 3em;
-  border-radius: 10px;
-  margin-top: 10px;
+  width: 75px;
+  height: 30px;
+  border-radius: 7px;
+  font-weight: bold;
+  border: 2px solid black;
+  font-size: 15px;
+  min-height: 100%;
+  position: relative;
+  bottom: 0px;
 }
+
+/*.currentTurn{
+  bottom: 0px;
+  color: blue;
+  position: static;
+}*/
 
 #X {
   background-color: blue;

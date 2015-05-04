@@ -1,5 +1,6 @@
 h1{
   font-family: "Francois One", sans-serif;
+  font-size: 40px;
 }
 
 .title{
@@ -15,7 +16,7 @@ h1{
   width: 400px;
   height: 400px;
   position: fixed;
-  top: 20%;
+  top: 22%;
   left: 30%;
 
 }
@@ -38,16 +39,17 @@ h1{
   font-weight: bold;
   border: 2px solid black;
   font-size: 15px;
-  min-height: 100%;
-  position: relative;
-  bottom: 0px;
+  position: fixed;
+  bottom: 25%;
+  left: 46%;
+  text-align: center;
 }
 
-/*.currentTurn{
-  bottom: 0px;
-  color: blue;
+.turn {
+  color: black;
   position: static;
-}*/
+  font-family: "Francois One", sans-serif;
+}
 
 #X {
   background-color: blue;

@@ -3,7 +3,10 @@ window.addEventListener("load", function () {
  	
 
 	var playerCounter = 0
-	
+	var xWins = 0
+	var oWins = 0
+
+	//Sets square based on player turn//
 	document.querySelector('#board').addEventListener("click", function(event){
 		if(event.target.innerHTML !== "&nbsp;"){
 			alert("This square is already played!")
@@ -21,19 +24,20 @@ window.addEventListener("load", function () {
 			playerCounter ++;
 			checkWinner();
 		}
-			
-			
+		turnDisplay();		
 		});	
-
+	//Alerts winner and counts number of match wins//
 	var winnerAlert = function(player){
 			if(player === 'X'){
 				alert("Player X wins!")
+				xWins ++;
 			} else {
 				alert("Player O wins!")
+				oWins ++;
 			}
-		autoReset();
+		resetBoard();
 	}
-
+	//Checks board against winning functions after each turn//
 	var checkWinner= function(){
 	var moves = [];
 	var setPositions = document.querySelectorAll('.box')
@@ -76,15 +80,8 @@ window.addEventListener("load", function () {
 			
 	}	
 
-	var autoReset = function(){
-		var boxes = document.querySelectorAll('.box')
-				for(i = 0; i < boxes.length; i++){
-							boxes[i].innerHTML = "&nbsp;"
-							boxes[i].setAttribute("id", "");
-				}
-			playerCounter = 0
-		}
-	
+	//Modular function for clearing board, upon winning condition or 
+	//when manual reset is initiated.
 	var resetBoard = function(){
 		var boxes = document.querySelectorAll('.box')
 				for(i = 0; i < boxes.length; i++){
@@ -93,15 +90,26 @@ window.addEventListener("load", function () {
 				}
 			playerCounter = 0
 		}
-
+	//Function to display current turn
 	var turnDisplay = function(){
-		var display = div.currentTurn;
+		var display = document.querySelector('.turn')
 		if(playerCounter%2 === 0){
-			display.innerHTML = 'Test'
-
+			display.innerHTML = 'Go player X!'
+		} else if(playerCounter%2 !== 0){
+			display.innerHTML = 'Go player O!'
+		} else if(playerCounter > 8){
+			display.innerHTML = ""
 		}
 	}
-
+	// var scoreBoard = function() {
+	// 	var score = div.score;
+	// 	if(playerCounter%2 === 0){
+	// 		score.innerHTML = 'test'
+	// 	} else {
+	// 		score.innerHTML = oWins
+	// 	}
+	// }
+	//Manual reset button event
 	document.querySelector('.reset').addEventListener("click", function(event){
 		resetBoard();
 		});

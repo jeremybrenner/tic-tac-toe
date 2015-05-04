@@ -1,8 +1,17 @@
+.title{
+  width: 31em;
+  height: 30em;
+  position: fixed;
+  left: 25%;
+  text-align: center
+}
+
+
 #board {
   width: 31em;
   height: 30em;
-  position: relative;
-  top: 30px;
+  position: fixed;
+  top: 25%;
   left: 25%;
 }
 
@@ -12,4 +21,22 @@
   border: 1px solid black;
   display: inline-block;
   margin-bottom: 4px;
+  border-radius: 10px;
+ /* font-size: 8em;*/
 }
+
+.reset {
+  width: 10em;
+  height: 3em;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#X {
+  background-color: blue;
+}
+
+#O {
+  background-color: red;
+}
+

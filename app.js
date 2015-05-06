@@ -31,9 +31,11 @@ window.addEventListener("load", function () {
 			if(player === 'X'){
 				alert("Player X wins!")
 				xWins ++;
-			} else {
-				alert("Player O wins!")
+			} else if(player === 'O'){
+				alert("Player O wins!") //working here****
 				oWins ++;
+			} else {
+				alert("Its a tie!")
 			}
 		resetBoard();
 	}
@@ -97,9 +99,7 @@ window.addEventListener("load", function () {
 			display.innerHTML = 'Go player X!'
 		} else if(playerCounter%2 !== 0){
 			display.innerHTML = 'Go player O!'
-		} else if(playerCounter > 8){
-			display.innerHTML = ""
-		}
+		} 
 	}
 	// var scoreBoard = function() {
 	// 	var score = div.score;
